@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Generador d'escales</title>
+        <link rel="stylesheet" href="stylesheets/main.css"/>
+    </head>
+    <body>
+        <h1>Generador d'escales</h1>
+        <div id="main_content">
+            <div id="grid_div">
+                <div id="options_div">
+                    <div>
+                        <label>Tònica:</label>
+                        <select id="scale_select">
+                            <option>Do</option>
+                            <option>Do#</option>
+                            <option>Re</option>
+                            <option>Re#</option>
+                            <option>Mi</option>
+                            <option>Fa</option>
+                            <option>Fa#</option>
+                            <option>Sol</option>
+                            <option>Sol#</option>
+                            <option>La</option>
+                            <option>La#</option>
+                            <option>Si</option>
+                        </select>
+
+                        <label>Afinació:</label>
+                        <select id="tunning_select">
+                            <option>Justa</option>
+                            <option>Pitagòrica</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button id="new_button">Nova escala</button>
+                        <button id="play_button" class="play_button">Play</button>
+                    </div>
+                </div>
+
+                <div id="notes_div"></div>
+            </div>
+        </div>
+        <script src="scripts/scales.js"></script>
+        <script src="scripts/sound.js"></script>
+    </body>
+</html>
