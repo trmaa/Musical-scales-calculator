@@ -5,14 +5,14 @@ const note_names = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", 
 
 function pythagorean_new(root_note) {
     let scale = {};
-    const pythagorean_ratios = [1, 3 / 2, 9 / 8, 3 / 2, 9 / 8, 3 / 2, 9 / 8];
+    const pythagorean_ratios = [1, 9/8, 81/64, 4/3, 3/2, 27/16, 243/128];
     const root_index = note_names.indexOf(root_note) - 2;
     if (root_index === -1) return {};
 
     let diff = root_index - note_names.indexOf("La");
     diff -= diff > 0 ? 12 : 0;
 
-    let root_f = LA_F * Math.pow(2, diff / 12);
+    let root_f = LA_F * Math.pow(2, diff / 12) + 28;
 
     let current_index = root_index;
     let current_octave = 0;
@@ -33,7 +33,7 @@ function pythagorean_new(root_note) {
 
         let note_id = note_names[current_index] + current_octave;
         
-        let frequency = root_f * pythagorean_ratios[i % pythagorean_ratios.length];
+        let frequency = root_f * pythagorean_ratios[i - 7*current_octave];
         frequency *= Math.pow(2, current_octave);
 
         scale[note_id] = parseFloat(frequency.toFixed(2));
@@ -104,12 +104,12 @@ function push_new_scale() {
         if (key !== "name") {
             html_content += `
                 <label>${key}:</label> ${parseInt(value)}
-                <input class="note_ckeckb" type="checkbox" value="${value}" data-note-id="${key}">
+                <input class="note_ckeckb" type="checkbox" value="${value*2}" data-note-id="${key}">
             `;
         }
     });
 
-    html_content += "<button class='erase_button'>Eliminar</button><br></div>";
+    html_content += "<button class='errase_button'>Eliminar</button><br></div>";
     output_div.innerHTML += html_content;
 }
 
