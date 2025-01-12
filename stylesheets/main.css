@@ -1,4 +1,6 @@
 * {
+    cursor: default;
+
     border-radius: 100px;
     border-style: solid;
     border: none;
@@ -9,6 +11,8 @@
 body {
     font-family: sans-serif;
     font-size: 20px;
+
+    background-color: #eee;
 
     padding: 20px;
     padding-left: 20%;
@@ -28,6 +32,8 @@ label {
 }
 
 select {
+    cursor: pointer;
+
     background-color: #fff0;
     font-size: 16px;
     padding: 5px;
@@ -38,6 +44,8 @@ select:hover {
 }
 
 button {
+    cursor: pointer;
+
     background-color: #fff0;
     border: 1px solid #333;
     font-size: 16px;
@@ -83,27 +91,65 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 2fr;
 
+    border-radius: 10px;
+
     height: 90%;
     width: 100%;
 }
 
 #options_div {
-    padding-top: 60%;
+    background-color: #fff0;
+
+    padding-top: 70%;
+    
     height: 100%;
 }
 
 #notes_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background-color: #eee;
+
+    border: 1px solid #333;
+    
     height: 100%;
     width: 100%;
 }
 
 .scale_div {
     transition-duration: 200ms;
+
     border: 1px solid #fff0;
     border-radius: 10px;
+    
+    width: 91%;
+
     padding: 32px;
 }
 
 .scale_div:hover {
     border: 1px solid #333;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.icon {
+    color: white;
+
+    width: 15px;
+    height: 15px;
+}
+
+.icon-big {
+    color: white;
+
+    width: 30px;
+    height: 30px;
 }
