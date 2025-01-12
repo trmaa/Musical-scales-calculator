@@ -108,6 +108,8 @@ button:hover {
     padding-top: 70%;
     
     height: 100%;
+
+    width: 67%;
 }
 
 #notes_div {
@@ -132,7 +134,7 @@ button:hover {
     border: 1px solid #fff0;
     border-radius: 10px;
     
-    width: 91%;
+    width: 85%;
 
     padding: 32px;
 }
