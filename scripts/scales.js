@@ -100,7 +100,7 @@ function scale_new() {
 function push_new_scale() {
     let scale = scale_new();
     let html_content = "<div class='scale_div'>";
-    html_content += `<label>${scale.name}</label><br>`;
+    html_content += `<label>${scale.name}</label><br></br>`;
 
     Object.entries(scale).forEach(([key, value]) => {
         if (key !== "name") {
