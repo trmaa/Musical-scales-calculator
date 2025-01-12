@@ -5,6 +5,7 @@ const note_names = ["Do", "Reb", "Re", "Mib", "Mi", "Fa", "Sob", "Sol", "Lab", "
 
 function pythagorean_new(root_note) {
     let scale = {};
+    //const pythagorean_ratios = [1, 3/2*9/8, 3/2*9/8*27/16*81/64, 4/3, 3/2, 3/2*9/8*27/16, 3/2*9/8*27/16*81/64*243/128];
     const pythagorean_ratios = [1, 9/8, 81/64, 4/3, 3/2, 27/16, 243/128];
     const root_index = note_names.indexOf(root_note) - 2;
     if (root_index === -1) return {};
