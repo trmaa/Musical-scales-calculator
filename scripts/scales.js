@@ -1,7 +1,7 @@
 let output_div = document.querySelector("#notes_div");
 
 const LA_F = 440;
-const note_names = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"];
+const note_names = ["Do", "Reb", "Re", "Mib", "Mi", "Fa", "Sob", "Sol", "Lab", "La", "Sib", "Si"];
 
 function pythagorean_new(root_note) {
     let scale = {};
@@ -138,5 +138,11 @@ play_button.addEventListener("click", () => {
         document.querySelectorAll(".note_ckeckb:checked").forEach(note_checkb => {
             play_sound(note_checkb.dataset.noteId, parseFloat(note_checkb.value));
         });
+    }
+});
+
+output_div.addEventListener("click", function(event) {
+    if (event.target.classList.contains("errase_button")) {
+        event.target.closest(".scale_div").remove();
     }
 });
